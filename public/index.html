@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free CDN Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #84fab0, #8fd3f4);
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #444;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .upload-form {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #eef;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Free CDN Service</h1>
+    <p>Host static files and integrate them into your website for free!</p>
+  </header>
+  <main>
+    <h2>How to Use the CDN</h2>
+    <p>You can include CSS, JavaScript, or any other file type directly into your website by referencing the URLs below.</p>
+    
+    <h3>Examples:</h3>
+    <h4>1. CSS File</h4>
+    <p>Add this to your HTML to include the CDN-hosted CSS file:</p>
+    <pre><code>&lt;link rel="stylesheet" href="https://free-cdn.vercel.app/static/css/styles.css"&gt;</code></pre>
+
+    <h4>2. JavaScript File</h4>
+    <p>Add this to your HTML to include the CDN-hosted JavaScript file:</p>
+    <pre><code>&lt;script src="https://free-cdn.vercel.app/static/js/script.js"&gt;&lt;/script&gt;</code></pre>
+
+    <h4>3. Images or Uploaded Files</h4>
+    <p>Use the generated URL after uploading a file. Example:</p>
+    <pre><code>&lt;img src="https://free-cdn.vercel.app/uploads/example.png" alt="Example Image"&gt;</code></pre>
+    
+    <h2>Upload Your Files</h2>
+    <form class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+      <label for="file">Choose a file to upload:</label><br>
+      <input type="file" id="file" name="file" required><br><br>
+      <button type="submit">Upload File</button>
+    </form>
+    <p>After uploading, you'll receive a URL that you can use to access your file via the CDN.</p>
+  </main>
+  <footer>
+    <p>&copy; 2024 Free CDN Service. Powered by Vercel.</p> | <p>made with ❤️ by FAYSi</p>
+  </footer>
+</body>
+</html>
